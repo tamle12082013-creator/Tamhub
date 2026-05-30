@@ -1,0 +1,318 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=108998792797219"
+
+UICorner.CornerRadius = UDim.new(1, 10) 
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+local Window = Fluent:CreateWindow({
+    Title = "Tâm hub",
+    SubTitle = "premium",
+    TabWidth = 157,
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = true,
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.End
+})
+local Tabs = {
+        Main0=Window:AddTab({ Title="Thông Tin" }),
+        Main1=Window:AddTab({ Title="Script main" }),
+        Main2=Window:AddTab({ Title="Farm kaitun" }),
+        Main3=Window:AddTab({ Title="Farm kaitun levi" }),
+        Main4=Window:AddTab({ Title="Script v4" }),
+       Main5=Window:AddTab({ Title="script pvp" }),
+}
+    Tabs.Main0:AddButton({
+    Title = "Discord",
+    Description = "TBoyRoblox Community",
+    Callback = function()
+        setclipboard("https://discord.gg/tboyroblox-community-1253927333920899153")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Youtuber",
+    Description = "TBoy Roblox",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@TBoyRoblox08")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Youtuber",
+    Description = "TBoy Gamer",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@TBoyGamer08")
+    end
+})
+    
+    Tabs.Main1:AddButton({
+    Title="banana Hub",
+    Description="",
+    Callback=function()
+	  repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().Key = "07fe7cf64c9b28da011b3d8f" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+  end
+})
+
+Tabs.Main2:AddButton({
+    Title="Banana Hub",
+    Description="",
+    Callback=function()	  
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "07fe7cf64c9b28da011b3d8f"
+getgenv().SettingFarm ={
+    ["Hide UI"] = false,
+    ["Reset Teleport"] = {
+        ["Enabled"] = false,
+        ["Delay Reset"] = 3,
+        ["Item Dont Reset"] = {
+            ["Fruit"] = {
+                ["Enabled"] = true,
+                ["All Fruit"] = true, 
+                ["Select Fruit"] = {
+                    ["Enabled"] = false,
+                    ["Fruit"] = {},
+                },
+            },
+        },
+    },
+    ["White Screen"] = false,
+    ["Lock Fps"] = {
+        ["Enabled"] = false,
+        ["FPS"] = 20,
+    },
+    ["Get Items"] = {
+        ["Saber"] = true,
+        ["Godhuman"] =  true,
+        ["Skull Guitar"] = true,
+        ["Mirror Fractal"] = true,
+        ["Cursed Dual Katana"] = true,
+        ["Upgrade Race V2-V3"] = true,
+        ["Auto Pull Lever"] = true,
+        ["Shark Anchor"] = true, --- if have cdk,sg,godhuman
+    },
+    ["Get Rare Items"] = {
+        ["Rengoku"] = false,
+        ["Dragon Trident"] = false, 
+        ["Pole (1st Form)"] = false,
+        ["Gravity Blade"]  = false,
+    },
+    ["Farm Fragments"] = {
+        ["Enabled"]  = false,
+        ["Fragment"] = 50000,
+    },
+    ["Auto Chat"] = {
+        ["Enabled"] = false,
+        ["Text"] = "",
+    },
+    ["Auto Summon Rip Indra"] = true, --- auto buy haki and craft haki legendary 
+    ["Select Hop"] = { -- 70% will have it
+        ["Hop Server If Have Player Near"] = false, 
+        ["Hop Find Rip Indra Get Valkyrie Helm or Get Tushita"] = true, 
+        ["Hop Find Dough King Get Mirror Fractal"] = false,
+        ["Hop Find Raids Castle [CDK]"] = true,
+        ["Hop Find Cake Queen [CDK]"] = true,
+        ["Hop Find Soul Reaper [CDK]"] = true,
+        ["Hop Find Darkbeard [SG]"] = true,
+        ["Hop Find Mirage [ Pull Lever ]"] = false,
+    },
+    ["Farm Mastery"] = {
+        ["Melee"] = false,
+        ["Sword"] = false,
+    },
+    ["Buy Haki"] = {
+        ["Enhancement"] = true,
+        ["Skyjump"] = true,
+        ["Flash Step"] = true,
+        ["Observation"] = true,
+    },
+    ["Sniper Fruit Shop"] = {
+        ["Enabled"] = true, -- Auto Buy Fruit in Shop Mirage and Normal
+        ["Fruit"] = {"Leopard-Leopard","Kitsune-Kitsune","Dragon-Dragon","Yeti-Yeti","Gas-Gas"},
+    },
+    ["Lock Fruit"] = {},
+    ["Webhook"] = {
+        ["Enabled"] = false,
+        ["WebhookUrl"] = "",
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"))()
+  end
+})
+
+Tabs.Main3:AddButton({
+    Title="Banana Hub",
+    Description="",
+    Callback=function()	
+    repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "07fe7cf64c9b28da011b3d8f"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/BananaCat-KaitunLevi.lua"))()
+ end
+})
+
+Tabs.Main4:AddButton({
+    Title="Banana Hub",
+    Description="",
+    Callback=function()
+    repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "07fe7cf64c9b28da011b3d8f"
+getgenv().ConfigV4 = {
+    ["Account Up Gear"] = {
+        ""
+    },
+    ["Account Help"] = {
+        "",
+        ""
+    },
+    ["Method Kick"] = {
+        ["End Moon"] = false,
+    },
+    ["Auto Join"] = true,
+    ["Auto Change Race"] = {
+        ["Enabled"] = false,
+        ["Race"] = {""} -- Human,Skypiea,Fishman,Mink
+    },
+    ["Webhook"] = {
+        ["url"] = "",
+        ["Done Train"] = false,
+        ["Done Trial"] = false,
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/NewV4Config.lua"))()
+ end
+})
+
+Tabs.Main5:AddButton({
+    Title="Banana Hub",
+    Description="",
+    Callback=function()
+    
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "07fe7cf64c9b28da011b3d8f"
+    getgenv().Setting = {
+        ["Team"] = "Pirate",
+        ["Method Click"] = {["Click Gun"] = false ,["Click Melee"] = true,["Click Sword"] = false,["Click Fruit"] = false, ["LowHealth"] = 5000, ["Delay Click"] = 0.3},
+        ["Race V4"] = {["Enable"] = true},
+        ["Webhook"] = {["Enabled"] = false,["Url Webhook"] = ""},
+        ["Misc"] = {["AutoBuyRandomandStoreFruit"] = true,["AutoBuySurprise"] = true},
+        ["SafeZone"] = {["Enable"] = true,["LowHealth"] = 4500,["MaxHealth"] = 8000,["Teleport Y"] = 2000},
+        ["Method Use Skill"] = {["Use Random"] = true,["Use Number"] = false},
+        ["Use random skill if player target low health"] = { --- suport only method use skill Number
+            ["Enabled"] = true,
+            ["Low Health"] = 4000,
+        },
+        ["Use Portal Teleport"] = false,
+        ["Target Time"] = 20,
+        ["Aim Prediction"] = 0.5,
+        ["Select Region"] = {["Enabled"] = false,["Region"] = {["Singapore"] = true,["United States"] = false,["Netherlands"] = false,["Germany"] =false,["India"] = false,["Australia"] = false}},
+        ["Ignore Devil Fruit"] = {"Human-Human","Portal-Portal"}, 
+        ["Dodge Skill Player"] = true, --- Beta per 50% can dodge 
+        ["Spam Dash"] = false, ---- risk can banned 1 day
+        ["Equip Weapon"] = {
+            ["Enabled"] = false,
+            ["Melee"] = {
+                ["Enabled"] = false,
+                ["Name Weapon"] = "",
+            },
+            ["Sword"] = {
+                ["Enabled"] = false,
+                ["Name Weapon"] = "",
+            },
+            ["Gun"] = {
+                ["Enabled"] = false,
+                ["Name Weapon"] = "",
+            },
+        },
+        ["Weapons"] = {
+            ["Melee"] = {
+                ["Enable"] = true,
+                ["Skills"] = {
+                    ["Z"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 2},
+                    ["X"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 3},
+                    ["C"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 5},
+                },
+            },
+            ["Blox Fruit"] = {
+                ["Enable"] = false,
+                ["Skills"] = {
+                    ["Z"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 4},
+                    ["X"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 6},
+                    ["C"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 9},
+                    ["V"] = {["Enable"] = false,["HoldTime"] = 0.3,["Number"] = 0},
+                    ["F"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 8},
+                },
+            },
+            ["Gun"] = {
+                ["Enable"] = true,
+                ["Skills"] = {
+                    ["Z"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 1},
+                    ["X"] = {["Enable"] = true,["HoldTime"] = 0.3,["Number"] = 7},
+                },
+            },
+            ["Sword"] = {
+                ["Enable"] = false,
+                ["Skills"] = {
+                    ["Z"] = {["Enable"] = true,["HoldTime"] = 1.5,["Number"] = 0},
+                    ["X"] = {["Enable"] = true,["HoldTime"] = 0.5,["Number"] = 0},
+                },
+            },
+        }
+    }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/BananaCat-BountyEz.lua"))()
+end
+})
+
+Tabs.Main5:AddButton({
+    Title="Banana Hub (m1)",
+    Description="",
+    Callback=function()
+    
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "07fe7cf64c9b28da011b3d8f"
+getgenv().config =   {
+    team = "Pirates", -- "Pirates" "Marines"
+    hpTimeout = 15,
+    targetTimeout = 20,
+    lowHealth = 4000,
+    safeHealth = 4500,
+    blackScreen = false,
+    useSkill = false, -- only x f gas fruit
+    equipPaleScarf = false,
+    webhookurl = "",
+    webhookEnable = false,
+    webhookSendMinutes = 5,
+    attackSpeed = 0.001,
+    mode = 1, -- 2 or 1 
+    sea = 3,
+    region = "Singapore",
+    trans = false, -- auto press V t rex 
+    bltween = true, -- bypass may thang di chuyen toc do cao lien tuc > 7s - kho gay dame 
+    bpsit = true, -- khong hunt may thang ngoi thuyen - kho gay dame 
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/Bountynew.lua"))()
+ end
+ })
+    
+
+
+    	
+    
