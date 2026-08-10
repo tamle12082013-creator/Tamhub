@@ -1,0 +1,50 @@
+local KEY = "Sharekeybanana"
+
+local Players = game:GetService("Players")
+local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local KeyGui = Instance.new("ScreenGui")
+KeyGui.Name = "KeySystem"
+KeyGui.ResetOnSpawn = false
+KeyGui.Parent = PlayerGui
+
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.fromOffset(320, 180)
+Frame.Position = UDim2.new(0.5, -160, 0.5, -90)
+Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
+Frame.Parent = KeyGui
+
+Instance.new("UICorner", Frame).CornerRadius = UDim.new(0, 10)
+
+local Box = Instance.new("TextBox")
+Box.Size = UDim2.fromOffset(280, 45)
+Box.Position = UDim2.fromOffset(20, 35)
+Box.PlaceholderText = "Nhập key..."
+Box.Text = ""
+Box.Parent = Frame
+
+local Button = Instance.new("TextButton")
+Button.Size = UDim2.fromOffset(280, 45)
+Button.Position = UDim2.fromOffset(20, 95)
+Button.Text = "Xác nhận"
+Button.Parent = Frame
+
+local Accepted = false
+
+Button.MouseButton1Click:Connect(function()
+    if Box.Text == KEY then
+        Accepted = true
+        KeyGui:Destroy()
+    else
+        Button.Text = "Sai key!"
+        task.wait(1)
+        Button.Text = "Xác nhận"
+    end
+end)
+
+repeat
+    task.wait()
+until Accepted
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().Key = "07fe7cf64c9b28da011b3d8f" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
